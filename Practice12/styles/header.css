@@ -1,0 +1,299 @@
+.header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: var(--purple);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.burger {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.figure-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.figure-logo-description {
+    padding-left: 20px;
+    font-family: 'Roboto-Medium';
+    font-size: 16px;
+}
+
+.navigation-list {
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.navigation-list-item:not(:last-child) {
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.3s;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.navigation-list-item:not(:last-child):hover,
+.navigation-list-item:not(:last-child):focus,
+.navigation-list-item:not(:last-child):active {
+    background-color: var(--hover-purple);
+    color: #fff;
+}
+
+.navigation-list-link {
+    position: relative;
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 15px;
+}
+
+.navigation-list-link:focus {
+    background-color: var(--hover-purple);
+    color: #fff;
+    outline: none;
+}
+
+.navigation-list-account {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("/styles/images/account.svg");
+    background-size: 30px 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+
+.navigation-list-account:hover {
+    background-color: var(--hover-purple);
+    background-image: url("/styles/images/accountHover.svg");
+}
+
+.navigation-list-bin {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("/styles/images/shoppingCart.svg");
+    background-size: 30px 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+
+.navigation-list-bin:hover {
+    background-color: var(--hover-purple);
+    background-image: url("/styles/images/shoppingCartHover.svg");
+}
+
+.navigation-list-bin::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--light-red);
+    text-align: center;
+    font-family: 'Roboto-Medium';
+    font-size: 12px;
+}
+
+.notifications {
+    position: relative;
+}
+
+.navigation-list-bell {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    background-image: url("/styles/images/Bell.svg");
+    background-size: 25px 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+
+.navigation-list-bell:hover {
+    background-color: var(--hover-purple);
+    background-image: url("/styles/images/BellHover.svg");
+}
+
+.notification-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    font-family: 'Roboto-Medium';
+    font-size: 12px;
+}
+
+.notification-list {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    padding: 10px 20px;
+    width: 200px;
+    height: 300px;
+    overflow: auto;
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+    background-color: var(--hover-purple);
+    border-radius: 15px;
+    color: #fff;
+}
+
+.notification-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.notification-close {
+    width: 30px;
+    height: 30px;
+    background-image: url("/styles/images/PlusIcon.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.navigation-list-bell:hover ~ .notification-list, .notification-list:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+@media (max-width: 1000px) {
+    .navigation-list-link {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .navigation-list-item:not(:last-child) {
+        display: none;
+    }
+
+    .navs {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .burger {
+        display: inherit;
+    }
+    
+    .burger-icon {
+        display: block;
+        cursor: pointer;
+        user-select: none;
+        padding: 15px;
+    }
+    
+    .burger-icon span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #333;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+    
+    #burger-checkbox {
+        display: none;
+    }
+    
+    #burger-checkbox:checked + .burger-icon span:nth-child(1) {
+        margin-right: 250px;
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    #burger-checkbox:checked + .burger-icon span:nth-child(2) {
+        margin-right: 250px;
+        opacity: 0;
+    }
+    
+    #burger-checkbox:checked + .burger-icon span:nth-child(3) {
+        margin-right: 250px;
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    .burger-menu {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        overflow-y: auto;
+        transition: right 0.3s;
+    }
+    
+    .burger-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .burger-menu li {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .burger-menu a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+    }
+    
+    #burger-checkbox:checked + .burger-icon ~ .burger-menu {
+        right: 0;
+    }
+    
+    #burger-checkbox:not(:checked) + .burger-icon ~ .burger-menu {
+        right: -250px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .navs {
+        display: block;
+    }
+}

@@ -1,0 +1,271 @@
+/* Подключение шрифтов */
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(/fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Roboto-BoldItalic';
+    src: url(/fonts/Roboto-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto-ExtraBold';
+    src: url(/fonts/Roboto-Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Roboto-ExtraBoldItalic';
+    src: url(/fonts/Roboto-BlackItalic.ttf);
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(/fonts/Roboto-Thin.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Roboto-LightItalic';
+    src: url(/fonts/Roboto-ThinItalic.ttf);
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(/fonts/Roboto-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto-MediumItalic';
+    src: url(/fonts/Roboto-MediumItalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto-SemiBold';
+    src: url(/fonts/Roboto-Medium.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Roboto-SemiBoldItalic';
+    src: url(/fonts/Roboto-MediumItalic.ttf);
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto-RegularItalic';
+    src: url(/fonts/Roboto-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url(/fonts/OpenSans-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'OpenSans-BoldItalic';
+    src: url(/fonts/OpenSans-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-ExtraBold';
+    src: url(/fonts/OpenSans-ExtraBold.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'OpenSans-ExtraBoldItalic';
+    src: url(/fonts/OpenSans-ExtraBoldItalic.ttf);
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url(/fonts/OpenSans-Light.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'OpenSans-LightItalic';
+    src: url(/fonts/OpenSans-LightItalic.ttf);
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-Medium';
+    src: url(/fonts/OpenSans-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'OpenSans-MediumItalic';
+    src: url(/fonts/OpenSans-MediumItalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url(/fonts/OpenSans-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBoldItalic';
+    src: url(/fonts/OpenSans-SemiBoldItalic.ttf);
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url(/fonts/OpenSans-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'OpenSans-RegularItalic';
+    src: url(/fonts/OpenSans-Regular.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root {
+    --white: #fff;
+    --blurred-white: #ffffff33;
+    --bright-purple: #923dc3bb;
+    --hover-purple: #923dc3;
+    --light-red: #FF6B6B;
+    --dark-blue: #05001bee;
+}
+
+/* Общие стили */
+
+body, figure, ul, ol, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.section {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    background-color: #322f3f;
+}
+
+.section-item {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #535353;
+    transition: background-color .5s;
+}
+
+.section-item:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.section-item:nth-child(2) {
+    grid-area: 1 / 3 / 3 / 4;
+}
+
+.section-item:nth-child(3) {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.section-item:nth-child(4) {
+    grid-area: 2 / 1 / 4 / 2;
+}
+
+.section-item:nth-child(5) {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.section-item:nth-child(6) {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.section-item:nth-child(7) {
+    grid-area: 3 / 2 / 4 / 5;
+}
+
+.section-item:hover {
+    background-color: var(--light-red);
+}
+
+.section-item-icon {
+    width: 18vw;
+    height: 12vw;
+    margin-bottom: 10px;
+}
+
+.section-item-paragraph {
+    font-family: "Roboto-Regular";
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#button {
+    margin: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: #535353;
+    color: #fff;
+    transition: transform .3s;
+}
+
+#button:hover {
+    transform: scale(1.05);
+}

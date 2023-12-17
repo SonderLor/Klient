@@ -1,0 +1,253 @@
+html, body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+    transition: color .3s;
+}
+
+a:hover {
+    color: #282877;
+}
+
+.task-section {
+    padding: 30px 5vw;
+    margin-bottom: 30px;
+    height: calc(100vh - 30px * 2);
+    background-color: #ddd;
+}
+
+.task-header {
+    margin: 40px 0;
+    text-align: center;
+    font-family: serif;
+    font-size: 42px;
+}
+
+.task-subheader {
+    margin: 20px 0;
+    text-align: center;
+    font-family: serif;
+    font-size: 24px;
+}
+
+.liks-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.liks-list-item {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.images-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.big-image {
+    box-sizing: border-box;
+    padding: 10px;
+    height: 400px;
+    width: 400px;
+    background-color: #fff;
+}
+
+.small-images {
+    padding: 10px 0;
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fff;
+}
+
+.image {
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    background-color: red;
+}
+
+.blocks-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.blocks-list-item {
+    width: 90%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.selected {
+    background-color: #e189ff;
+}
+
+.blocks-paragraph {
+    text-align: center;
+}
+
+.slider-container {
+    padding: 20px 0;
+    margin: 50px auto;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+}
+
+.slide {
+    width: 30vw;
+    height: 30vw;
+    flex-shrink: 0;
+    text-align: center;
+    line-height: 30vw;
+    font-size: 40px;
+    color: #fff;
+}
+
+.bar {
+    position: relative;
+    width: 30vw;
+    height: 20px;
+    align-self: center;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.point {
+    position: absolute;
+    top: -2.5px;
+    width: 10px;
+    height: 25px;
+    background-color: #4641de;
+}
+
+.loading {
+    margin: 20px auto;
+    width: 0;
+    height: 20px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.pulsating {
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    transition: transform 0.5s ease-in-out;
+}
+
+.section-catalog {
+    height: auto;
+}
+
+.section-catalog-list {
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    color: #fff;
+    background-color: #05001b;
+    border-radius: 15px;
+}
+
+.catalog-list-item {
+    padding: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff33;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+.catalog-list-item-flex-container {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-list-item-img {
+    width: 172px;
+    height: 172px;
+}
+
+.catalog-list-item-paragraph {
+    margin: 10px 0;
+    flex-grow: 2;
+    text-align: center;
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+}
+
+.catalog-list-item-price-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog-list-item-price {
+    font-size: 20px;
+    font-family: 'Roboto-Medium';
+    color: #fff;
+}
+
+.catalog-list-item-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #ffffffaa;
+    background-image: url("images/ShopAddItem.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.catalog-list-item-button:hover {
+    background-color: #fff;
+    box-shadow: 0 0 10px #00000022;
+}

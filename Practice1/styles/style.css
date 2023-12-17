@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.burger-icon {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    padding: 15px;
+}
+
+.burger-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+#burger-checkbox {
+    display: none;
+}
+
+#burger-checkbox:checked + .burger-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#burger-checkbox:checked + .burger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+#burger-checkbox:checked + .burger-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.burger-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    overflow-y: auto;
+    transition: right 0.3s;
+}
+
+.burger-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-menu li {
+    padding: 15px;
+    text-align: center;
+}
+
+.burger-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+#burger-checkbox:checked + .burger-icon ~ .burger-menu {
+    right: 0;
+}
+
+#burger-checkbox:not(:checked) + .burger-icon ~ .burger-menu {
+    right: -250px;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-caption::before {
+    content: "Текст подписи";
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    width: 90%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5%;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+
+.logo-container:hover .logo-caption::before {
+    opacity: 1;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Стили для поля ввода */
+.input-field {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+/* Стили для подсказки (псевдоэлемент) */
+.input-label::before {
+    content: "Введите ваше имя";
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+    color: #999;
+    transition: opacity 0.3s, top 0.3s;
+}
+
+/* Анимация появления подсказки при фокусе на поле */
+.input-field:focus + .input-label::before,
+.input-field:valid + .input-label::before {
+    top: 0px;
+    opacity: 1;
+}
+
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #923dc3;
+    color: black;
+    font-size: 16px;
+    border: 3px solid transparent; /* Толщина рамки */
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: visible;
+}
+
+.button3::before {
+    content: "";
+    border-radius: 25px;
+    position: absolute;
+    top: -10px; /* Расстояние, на которое будет изменяться края кнопки */
+    left: -10px; /* Расстояние, на которое будет изменяться края кнопки */
+    right: -10px; /* Расстояние, на которое будет изменяться края кнопки */
+    bottom: -10px; /* Расстояние, на которое будет изменяться края кнопки */
+    background-color: #923dc3bb; /* Новый цвет краев */
+    z-index: -1;
+    transition: top 0.3s, left 0.3s, right 0.3s, bottom 0.3s;
+}
+
+.button3:hover {
+    background-color: #fff; /* Новый цвет фона при наведении */
+}
+
+.button3:hover::before {
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+}
+
+.animated-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #FF6B6B, #FF9E9E, #FFC3A0, #FF6B6B);
+    background-size: 400%;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-position 0.3s, transform 0.3s;
+}
+
+.animated-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.animated-button:hover {
+    background-position: 100%;
+}
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.pulse:hover, 
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+
+.close:hover,
+.close:focus {
+  box-shadow: 
+    inset -3.5em 0 0 0 var(--hover),
+    inset 3.5em 0 0 0 var(--hover);  
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+.offset {  
+  box-shadow: 
+    0.3em 0.3em 0 0 var(--color),
+    inset 0.3em 0.3em 0 0 var(--color);
+  
+  &:hover,
+  &:focus {
+    box-shadow: 
+      0 0 0 0 var(--hover),
+      inset 6em 3.5em 0 0 var(--hover);
+  }
+}
+
+button {  
+    color: var(--color);
+    transition: 0.25s;
+    
+    &:hover,
+    &:focus { 
+      border-color: var(--hover);
+      color: #fff;
+    }
+}
+
+button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}

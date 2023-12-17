@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotiki</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="icon" type="image/svg+xml" href="/styles/images/MainLogo.svg">
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+            var pressed = false;
+            document.body.addEventListener('mousemove', (e) => {
+                if (pressed) {
+                    const img = document.createElement("img");
+                    img.src = "/styles/images/MainLogo.svg";
+                    img.style.position = "absolute";
+                    img.style.pointerEvents = "none";
+                    img.style.width = 50 + "px";
+                    img.style.height = 50 + "px";
+                    img.style.top = e.pageY - img.height / 2 + "px";
+                    img.style.left = e.pageX - img.width / 2 + "px";
+                    document.body.appendChild(img);
+                }
+            });
+
+            const button = document.getElementById("button");
+            button.addEventListener("click", (e) => {
+                if (button.style.backgroundColor == "red") {
+                    pressed = false;
+                    button.style.backgroundColor = "#535353";
+                } else {
+                    pressed = true;
+                    button.style.backgroundColor = "red";
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="body">
+    <ul class="section">
+        <li class="section-item">
+            <img src="/styles/images/ProcessorPNG.png" alt="Процессор" class="section-item-icon">
+            <p class="section-item-paragraph">
+                Центральный <b>процессор</b> <abbr title="Central Processing Unit">(CPU)</abbr> выполняет вычисления и управляет всеми операциями компьютера. Он является <i>"мозгом"</i> компьютера и определяет его производительность.
+            </p>
+        </li>
+        <li class="section-item">
+            <img src="/styles/images/VideoCardPNG.png" alt="Видеокарта" class="section-item-icon">
+            <p class="section-item-paragraph">
+                <b>Видеокарта</b> обрабатывает графику и отображает изображение на мониторе. Для игр и графических приложений требуется более мощная видеокарта.
+            </p>
+        </li>
+        <li class="section-item">
+            <img src="/styles/images/Ram_PNG.png" alt="Оперативная память" class="section-item-icon">
+            <p class="section-item-paragraph">
+                <b><abbr title="Random Access Memory">RAM</abbr></b> временно хранит данные, которые компьютер использует для текущих операций. Большее количество <abbr title="Random Access Memory">RAM</abbr> обеспечивает более быструю и плавную работу.
+            </p>
+        </li>
+        <li class="section-item">
+            <img src="/styles/images/HddSsdPNG.png" alt="Основная память" class="section-item-icon">
+            <p class="section-item-paragraph">
+                <b>Жесткий диск</b> <abbr title="Hard Disk Drive">(HDD)</abbr> или твердотельный накопитель (<abbr title="Solid-State Drive">SSD</abbr>) используется для хранения операционной системы, программ и данных. <abbr title="Solid-State Drive">SSD</abbr> обычно быстрее и надежнее, но <abbr title="Hard Disk Drive">HDD</abbr> может иметь большую емкость.
+            </p>
+        </li>
+        <li class="section-item">
+            <img src="/styles/images/PowerUnitPNG.png" alt="Блок питания" class="section-item-icon">
+            <p class="section-item-paragraph">
+                <b>Блок питания</b> преобразует электрическую энергию из сети в энергию, которая подходит для компьютера. Его мощность должна соответствовать потребностям всех компонентов.
+            </p>
+        </li>
+        <li class="section-item">
+            <img src="/styles/images/CoolerPNG.png" alt="Система охлаждения" class="section-item-icon">
+            <p class="section-item-paragraph">
+                <b>Система охлаждения</b>, включая вентиляторы и радиаторы, предотвращает перегрев компонентов, особенно <abbr title="Central Processing Unit">CPU</abbr> и <abbr title="Graphics Processing Unit">GPU</abbr>.
+            </p>
+        </li>
+        <li class="section-item">
+            <img src="/styles/images/CasePNG.png" alt="Компьютерный кейс" class="section-item-icon">
+            <p class="section-item-paragraph">
+                <b>Корпус</b> предоставляет защиту компонентам и обеспечивает их охлаждение. Он также имеет разъемы и отсеки для установки комплектующих.
+            </p>
+        </li>
+    </ul>
+    <button id="button">
+        Нравится
+    </button>
+</body>
+
+</html>

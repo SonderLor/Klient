@@ -1,0 +1,9 @@
+#centeredContainer {
+    width: 100vw;
+    height: 100vh;
+}
+
+#centeredImage {
+    width: 50vw;
+    height: auto;
+}

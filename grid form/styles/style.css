@@ -1,0 +1,359 @@
+/* Подключение шрифтов */
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(/fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Roboto-BoldItalic';
+    src: url(/fonts/Roboto-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto-ExtraBold';
+    src: url(/fonts/Roboto-Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Roboto-ExtraBoldItalic';
+    src: url(/fonts/Roboto-BlackItalic.ttf);
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(/fonts/Roboto-Thin.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Roboto-LightItalic';
+    src: url(/fonts/Roboto-ThinItalic.ttf);
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(/fonts/Roboto-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto-MediumItalic';
+    src: url(/fonts/Roboto-MediumItalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto-SemiBold';
+    src: url(/fonts/Roboto-Medium.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Roboto-SemiBoldItalic';
+    src: url(/fonts/Roboto-MediumItalic.ttf);
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto-RegularItalic';
+    src: url(/fonts/Roboto-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url(/fonts/OpenSans-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'OpenSans-BoldItalic';
+    src: url(/fonts/OpenSans-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-ExtraBold';
+    src: url(/fonts/OpenSans-ExtraBold.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'OpenSans-ExtraBoldItalic';
+    src: url(/fonts/OpenSans-ExtraBoldItalic.ttf);
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url(/fonts/OpenSans-Light.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'OpenSans-LightItalic';
+    src: url(/fonts/OpenSans-LightItalic.ttf);
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-Medium';
+    src: url(/fonts/OpenSans-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'OpenSans-MediumItalic';
+    src: url(/fonts/OpenSans-MediumItalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url(/fonts/OpenSans-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBoldItalic';
+    src: url(/fonts/OpenSans-SemiBoldItalic.ttf);
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url(/fonts/OpenSans-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'OpenSans-RegularItalic';
+    src: url(/fonts/OpenSans-Regular.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root {
+    --white: #fff;
+    --blurred-white: #ffffff33;
+    --bright-purple: #923dc3bb;
+    --hover-purple: #923dc3;
+    --light-red: #FF6B6B;
+    --dark-blue: #05001bee;
+}
+
+/* Общие стили */
+
+body, figure, ul, ol, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input, textarea, button {
+    padding: 0;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.section-form {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.form {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(35, 1px);
+    gap: 10px 0;
+}
+
+.container {
+    position: relative;
+}
+
+.container:nth-child(1) {
+    grid-area: 1 / 1 / 8 / 7;
+}
+
+.container:nth-child(2) {
+    grid-area: 8 / 1 / 15 / 4;
+}
+
+.container:nth-child(3) {
+    grid-area: 8 / 4 / 15 / 7;
+}
+
+.container:nth-child(4) {
+    grid-area: 15 / 1 / 22 / 4;
+}
+
+.container:nth-child(5) {
+    grid-area: 15 / 4 / 22 / 7;
+}
+
+.container:nth-child(6) {
+    grid-area: 22 / 1 / 29 / 7;
+}
+
+.container:nth-child(7) {
+    grid-area: 29 / 1 / 36 / 2;
+}
+
+.container:nth-child(1), .container:nth-child(7) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-header {
+    text-align: center;
+    color: white;
+    font-family: "Roboto-Bold";
+    font-size: 32px;
+}
+
+.form-label {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    width: 90%;
+    height: 60%;
+    color: white;
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: all .2s;
+}
+
+.form-label::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #48a9ff;
+}
+
+.form-input {
+    position: absolute;
+    z-index: 2;
+    bottom: 20%;
+    left: 5%;
+    width: 90%;
+    height: 60%;
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    background-color: transparent;
+    color: black;
+    transition: background-color .2s;
+}
+
+.container:nth-child(6) .form-input,  .container:nth-child(6) .form-label{
+    width: 95%;
+    left: 2.5%;
+}
+
+.form-input:focus, .container:not(:nth-child(6)) .form-input:valid {
+    background-color: #48a9ff;
+}
+
+.form-input:focus + .form-label, .container:not(:nth-child(6)) .form-input:valid + .form-label {
+    top: -25%;
+}
+
+.form-button {
+    padding: 15px;
+    background-color: #48a9ff;
+    border-radius: 5px;
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    transition: all .2s;
+}
+
+.form-button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+@media (max-width: 712px) {
+    .container:nth-child(1) {
+        grid-area: 1 / 1 / 6 / 7;
+    }
+    
+    .container:nth-child(2) {
+        grid-area: 6 / 1 / 11 / 7;
+    }
+    
+    .container:nth-child(3) {
+        grid-area: 11 / 1 / 16 / 7;
+    }
+    
+    .container:nth-child(4) {
+        grid-area: 16 / 1 / 21 / 7;
+    }
+    
+    .container:nth-child(5) {
+        grid-area: 21 / 1 / 26 / 7;
+    }
+    
+    .container:nth-child(6) {
+        grid-area: 26 / 1 / 31 / 7;
+    }
+    
+    .container:nth-child(7) {
+        grid-area: 31 / 1 / 36 / 7;
+    }
+
+    .container:nth-child(6) .form-input,  .container:nth-child(6) .form-label{
+        width: 90%;
+        left: 5%;
+    }
+
+    .container:nth-child(7) {
+        margin-left: 2.5%;
+        justify-content: start;
+        align-items: center;
+    }
+}
